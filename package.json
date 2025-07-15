@@ -1,15 +1,18 @@
 {
   "name": "zora-sniper-bot",
   "version": "1.0.0",
-  "description": "Zora Coins monitoring and sniping bot",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "prod": "cross-env DEBUG=false node index.js",
+    "debug": "cross-env DEBUG=true node index.js"
   },
   "dependencies": {
-    "@zoralabs/coins-sdk": "^1.0.0",
-    "dotenv": "^16.3.1",
+    "@zoralabs/coins-sdk": "^0.0.8",
+    "dotenv": "^16.0.3",
     "node-telegram-bot-api": "^0.61.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
